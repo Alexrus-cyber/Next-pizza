@@ -1,3 +1,14 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": "eslint-config-next",
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
+  },
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": [2, "single"],
+    "no-console": 0
+  }
 }
