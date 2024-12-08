@@ -3,6 +3,7 @@ import React from "react";
 import { Container } from "./container";
 import Image from "next/image";
 import { Button } from "../ui"
+import { ShoppingCart, User } from "lucide-react"
 
 interface Props {
     className?: string;
@@ -22,7 +23,21 @@ export const Header: React.FC<Props> = ({className}) => {
                 </div>
                 {/*Правая часть */}
                 <div className="flex items-center gap-3">
-                    <Button variant={"outline"}>Войти</Button>
+                    <Button variant={"outline"} className="flex items-center gap-1">
+                        <User size={16} />
+                        Войти
+                    </Button>
+
+                    <div>
+                        <Button className="group relative">
+                            <b>520 $</b>
+                            <span className="h-full w-[1px] bg-white/30 mx-3"/>
+                            <div className="flex items-center gap-1 transition duration-300 group-hover:opacity-0">
+                                <ShoppingCart className="h4 w-4 relative" strokeWidth={2}/>
+                                <b>3</b>
+                            </div>
+                        </Button>
+                    </div>
                 </div>
             </Container>
         </header>
